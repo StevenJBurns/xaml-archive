@@ -1,0 +1,45 @@
+<Page	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		Height="480" Width ="480">
+		<usercontrol xmlns:toolkit="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls" x:class="TerribleUX.MainPage" 
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+		mc:ignorable="d" d:designheight="300" d:designwidth="400">
+			<usercontrol.resources>
+			<style targettype="ProgressBar" x:key="pbStyle">
+		04             <Setter Property="Minimum" Value="0" ></Setter>  05             
+		<Setter Property="Maximum" Value="100" ></Setter>
+		<Setter Property="Height" Value="30" ></Setter>
+		<Setter Property="Width" Value="125" ></Setter>
+		<Setter Property="Minimum" Value="0" ></Setter>
+		</style>
+		<style targettype="ComboBox" x:key="cbStyle">
+		<Setter Property="Height" Value="30" ></Setter>
+		<Setter Property="Width" Value="130" ></Setter>
+		</style>
+		<datatemplate x:key="tvDataTemplate">
+		<combobox mouseenter="ComboBox_MouseEnter" style="{StaticResource cbStyle}">
+		<comboboxitem> 
+		<progressbar value="25" style="{StaticResource pbStyle}"></progressbar>  18                 </comboboxitem>  19                 <comboboxitem>  20                     <progressbar value="65" style="{StaticResource pbStyle}"></progressbar>  21                 </comboboxitem>  22                 <comboboxitem>  23                     <progressbar value="35" style="{StaticResource pbStyle}"></progressbar>  24                 </comboboxitem>  25             </combobox>  26         </datatemplate>  27     </usercontrol.resources>  28     <grid x:name="LayoutRoot" background="White">  29         <toolkit:treeview>  30             <toolkit:treeviewitem mouseenter="TreeViewItem_MouseEnter" headertemplate="{StaticResource tvDataTemplate}">  31                 <toolkit:treeviewitem mouseenter="TreeViewItem_MouseEnter" headertemplate="{StaticResource tvDataTemplate}">  32                 <toolkit:treeviewitem mouseenter="TreeViewItem_MouseEnter" headertemplate="{StaticResource tvDataTemplate}">  33                 <toolkit:treeviewitem mouseenter="TreeViewItem_MouseEnter" headertemplate="{StaticResource tvDataTemplate}">  34                     <toolkit:treeviewitem mouseenter="TreeViewItem_MouseEnter" headertemplate="{StaticResource tvDataTemplate}">  35                     <toolkit:treeviewitem mouseenter="TreeViewItem_MouseEnter" headertemplate="{StaticResource tvDataTemplate}">  36                 </toolkit:treeviewitem>
+							</toolkit:treeviewitem>
+								<toolkit:treeviewitem mouseenter="TreeViewItem_MouseEnter" headertemplate="{StaticResource tvDataTemplate}">
+									<toolkit:treeviewitem mouseenter="TreeViewItem_MouseEnter" headertemplate="{StaticResource tvDataTemplate}">
+										</toolkit:treeviewitem>
+											<toolkit:treeviewitem mouseenter="TreeViewItem_MouseEnter" headertemplate="{StaticResource tvDataTemplate}">
+												<toolkit:treeviewitem mouseenter="TreeViewItem_MouseEnter" headertemplate="{StaticResource tvDataTemplate}">
+													<toolkit:treeviewitem mouseenter="TreeViewItem_MouseEnter" headertemplate="{StaticResource tvDataTemplate}">
+														<toolkit:treeviewitem mouseenter="TreeViewItem_MouseEnter" headertemplate="{StaticResource tvDataTemplate}">
+													</toolkit:treeviewitem>
+												</toolkit:treeviewitem>
+											</toolkit:treeviewitem>
+										</toolkit:treeviewitem>
+									</toolkit:treeviewitem>
+								</toolkit:treeviewitem>
+							</toolkit:treeviewitem>
+						</toolkit:treeviewitem>
+					</toolkit:treeviewitem>
+				</toolkit:treeview>
+			</grid>
+		</usercontrol> 

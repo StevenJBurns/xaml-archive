@@ -1,0 +1,20 @@
+<p:Page xmlns:p="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        WindowTitle="XAML 3D">
+	
+	<p:Border Margin="48" BorderBrush="Black" BorderThickness="4" Background="DarkGray">
+	  <p:Viewport3D>
+	    <p:ModelVisual3D>
+	      <p:ModelVisual3D.Content>
+		<p:GeometryModel3D>
+		  <p:GeometryModel3D.Content>
+		    <p:MeshGeometry3D Positions="0 0 1, 1 1 0, 1 0 0"
+				      TriangleIndicies="0 1 2" />
+		  </p:ModelVisual3D.Content>
+		</p:GeometryModel3D.Content>
+	      </p:GeometryModel3D>
+	    </p:ModelVisual3D>
+	  </p:Viewport3D>
+	</p:Border>
+
+</p:Page>

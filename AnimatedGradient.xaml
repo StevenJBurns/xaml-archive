@@ -1,0 +1,83 @@
+<Page xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+  <Page.Background>
+    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+      <GradientStop x:Name="bgStop0" Offset="0.00" Color="Black" />
+      <GradientStop x:Name="bgStop1" Offset="0.75" Color="White" />
+      <GradientStop x:Name="bgStop2" Offset="1.00" Color="Black" />
+    </LinearGradientBrush>
+  </Page.Background>
+  <Page.Triggers>
+    <EventTrigger SourceName="ButtonGray" RoutedEvent="Button.Click">
+      <EventTrigger.Actions>
+        <BeginStoryboard>
+          <Storyboard>
+            <ColorAnimation Storyboard.TargetName="bgStop0" Storyboard.TargetProperty="Color" To="Gray" Duration="0:0:0.5" />
+            <ColorAnimation Storyboard.TargetName="bgStop1" Storyboard.TargetProperty="Color" To="White" Duration="0:0:0.5" />
+            <ColorAnimation Storyboard.TargetName="bgStop2" Storyboard.TargetProperty="Color" To="Gray" Duration="0:0:0.5" />
+          </Storyboard>
+        </BeginStoryboard>
+      </EventTrigger.Actions>
+    </EventTrigger>
+    <EventTrigger SourceName="ButtonRed" RoutedEvent="Button.Click">
+      <EventTrigger.Actions>
+        <BeginStoryboard>
+          <Storyboard>
+            <ColorAnimation Storyboard.TargetName="bgStop0" Storyboard.TargetProperty="Color" To="DarkRed" Duration="0:0:0.5" />
+            <ColorAnimation Storyboard.TargetName="bgStop1" Storyboard.TargetProperty="Color" To="Pink" Duration="0:0:0.5" />
+            <ColorAnimation Storyboard.TargetName="bgStop2" Storyboard.TargetProperty="Color" To="DarkRed" Duration="0:0:0.5" />
+          </Storyboard>
+        </BeginStoryboard>
+      </EventTrigger.Actions>
+    </EventTrigger>
+    <EventTrigger SourceName="ButtonBlue" RoutedEvent="Button.Click">
+      <EventTrigger.Actions>
+        <BeginStoryboard>
+          <Storyboard>
+            <ColorAnimation Storyboard.TargetName="bgStop0" Storyboard.TargetProperty="Color" To="Navy" Duration="0:0:0.5" />
+            <ColorAnimation Storyboard.TargetName="bgStop1" Storyboard.TargetProperty="Color" To="LightBlue" Duration="0:0:0.5" />
+            <ColorAnimation Storyboard.TargetName="bgStop2" Storyboard.TargetProperty="Color" To="Navy" Duration="0:0:0.5" />
+          </Storyboard>
+        </BeginStoryboard>
+      </EventTrigger.Actions>
+    </EventTrigger>
+    <EventTrigger SourceName="ButtonGreen" RoutedEvent="Button.Click">
+      <EventTrigger.Actions>
+        <BeginStoryboard>
+          <Storyboard>
+            <ColorAnimation Storyboard.TargetName="bgStop0" Storyboard.TargetProperty="Color" To="DarkGreen" Duration="0:0:0.5" />
+            <ColorAnimation Storyboard.TargetName="bgStop1" Storyboard.TargetProperty="Color" To="LightGreen" Duration="0:0:0.5" />
+            <ColorAnimation Storyboard.TargetName="bgStop2" Storyboard.TargetProperty="Color" To="DarkGreen" Duration="0:0:0.5" />
+          </Storyboard>
+        </BeginStoryboard>
+      </EventTrigger.Actions>
+    </EventTrigger>
+    <EventTrigger SourceName="ButtonYellow" RoutedEvent="Button.Click">
+      <EventTrigger.Actions>
+        <BeginStoryboard>
+          <Storyboard>
+            <ColorAnimation Storyboard.TargetName="bgStop0" Storyboard.TargetProperty="Color" To="Gold" Duration="0:0:0.5" />
+            <ColorAnimation Storyboard.TargetName="bgStop1" Storyboard.TargetProperty="Color" To="White" Duration="0:0:0.5" />
+            <ColorAnimation Storyboard.TargetName="bgStop2" Storyboard.TargetProperty="Color" To="Gold" Duration="0:0:0.5" />
+          </Storyboard>
+        </BeginStoryboard>
+      </EventTrigger.Actions>
+    </EventTrigger>
+  </Page.Triggers>
+  <StackPanel Margin="16" VerticalAlignment="Center" HorizontalAlignment="Left">
+    <StackPanel.Resources>
+      <Style TargetType="Button">
+        <Setter Value="02" Property="Margin" />
+        <Setter Value="72" Property="Height" />
+        <Setter Value="72" Property="Width" />
+        <Setter Value="18" Property="FontSize" />
+      </Style>
+    </StackPanel.Resources>  
+    <Button x:Name="ButtonGray"   Content="Gray" />
+    <Button x:Name="ButtonRed"    Content="Red" />
+    <Button x:Name="ButtonBlue"   Content="Blue" />
+    <Button x:Name="ButtonGreen"  Content="Green" />
+    <Button x:Name="ButtonYellow" Content="Yellow" />
+  </StackPanel>
+</Page>
