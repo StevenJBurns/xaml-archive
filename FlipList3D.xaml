@@ -14,7 +14,6 @@
       <s:String>Five</s:String>
     </x:Array>
 
-
     <DataTemplate x:Key="frontTemplate">
       <GroupBox Header="Front" Background="White">
         <TextBlock FontSize="40" Foreground="Green" Text="{Binding}" />
@@ -32,19 +31,14 @@
     </DataTemplate>
 
     <DataTemplate x:Key="flipItemTemplate">
-
       <!-- Note: Camera setup only works when this is square. -->
       <Grid Width="200" Height="200">
-
-        <!-- Provides 3D rotation transition. Hidden except for when animation is
-       active. -->
+        <!-- Provides 3D rotation transition. Hidden except for when animation is active. -->
         <Viewport3D Grid.Column="0" x:Name="vp3D" Visibility="Hidden">
           <Viewport3D.Camera>
             <PerspectiveCamera x:Name="camera" Position="0,0,0.5" LookDirection="0,0,-1" FieldOfView="90" />
           </Viewport3D.Camera>
-
           <Viewport3D.Children>
-
             <ModelVisual3D>
               <ModelVisual3D.Content>
                 <Model3DGroup>
@@ -187,39 +181,20 @@
               <EventTrigger RoutedEvent="Grid.MouseDown">
                 <BeginStoryboard>
                   <Storyboard>
-                    <ObjectAnimationUsingKeyFrames
-                           Storyboard.TargetName="vp3D"
-                           Storyboard.TargetProperty="Visibility">
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="vp3D" Storyboard.TargetProperty="Visibility">
                       <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{x:Static Visibility.Visible}" />
                       <DiscreteObjectKeyFrame KeyTime="0:0:1.1" Value="{x:Static Visibility.Hidden}" />
                     </ObjectAnimationUsingKeyFrames>
-
-                    <ObjectAnimationUsingKeyFrames
-                           Storyboard.TargetName="frontWrapper"
-                           Storyboard.TargetProperty="Visibility">
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="frontWrapper" Storyboard.TargetProperty="Visibility">
                       <DiscreteObjectKeyFrame KeyTime="0:0:1" Value="{x:Static Visibility.Visible}"/>
                     </ObjectAnimationUsingKeyFrames>
-                    <ObjectAnimationUsingKeyFrames
-                           Storyboard.TargetName="backWrapper"
-                           Storyboard.TargetProperty="Visibility">
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="backWrapper" Storyboard.TargetProperty="Visibility">
                       <DiscreteObjectKeyFrame KeyTime="0:0:0.05" Value="{x:Static Visibility.Hidden}" />
                     </ObjectAnimationUsingKeyFrames>
-
-                    <DoubleAnimation To="0" Duration="0:0:0.05"
-                           Storyboard.TargetName="backWrapper"
-                           Storyboard.TargetProperty="Opacity" />
-                    <DoubleAnimation BeginTime="0:0:1.05" Duration="0:0:0.05"
-                           Storyboard.TargetName="frontWrapper"
-                           Storyboard.TargetProperty="Opacity" />
-
-                    <Point3DAnimation To="0,0,1.1" From="0,0,0.5"
-                           BeginTime="0:0:0.05" Duration="0:0:0.5" AutoReverse="True" DecelerationRatio="0.3"
-                           Storyboard.TargetName="camera"
-                           Storyboard.TargetProperty="(PerspectiveCamera.Position)" />
-                    <DoubleAnimation From="180" To="360" AccelerationRatio="0.3" DecelerationRatio="0.3"
-                           BeginTime="0:0:0.05" Duration="0:0:1"
-                           Storyboard.TargetName="rotate"
-                           Storyboard.TargetProperty="Angle" />
+                    <DoubleAnimation To="0" Duration="0:0:0.05" Storyboard.TargetName="backWrapper" Storyboard.TargetProperty="Opacity" />
+                    <DoubleAnimation BeginTime="0:0:1.05" Duration="0:0:0.05" Storyboard.TargetName="frontWrapper" Storyboard.TargetProperty="Opacity" />
+                    <Point3DAnimation To="0,0,1.1" From="0,0,0.5" BeginTime="0:0:0.05" Duration="0:0:0.5" AutoReverse="True" DecelerationRatio="0.3" Storyboard.TargetName="camera" Storyboard.TargetProperty="(PerspectiveCamera.Position)" />
+                    <DoubleAnimation From="180" To="360" AccelerationRatio="0.3" DecelerationRatio="0.3" BeginTime="0:0:0.05" Duration="0:0:1" Storyboard.TargetName="rotate" Storyboard.TargetProperty="Angle" />
                   </Storyboard>
                 </BeginStoryboard>
               </EventTrigger>
@@ -227,13 +202,9 @@
             <ContentPresenter Content="{Binding}" ContentTemplate="{StaticResource backTemplate}" />
           </Border>
         </Border>
-
-
       </Grid>
     </DataTemplate>
-
   </Page.Resources>
-
   <ScrollViewer>
     <ItemsControl ItemsSource="{StaticResource src}" ItemTemplate="{StaticResource flipItemTemplate}">
       <ItemsControl.ItemsPanel>
@@ -241,10 +212,7 @@
           <WrapPanel />
         </ItemsPanelTemplate>
       </ItemsControl.ItemsPanel>
-
     </ItemsControl>
   </ScrollViewer>
-
-
 </Page>
 
