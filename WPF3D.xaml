@@ -4,6 +4,7 @@
 
   <p:Border Margin="48" BorderBrush="Black" BorderThickness="4" Background="DarkGray">
     <p:Viewport3D>
+      <!-- 
       <p:ModelVisual3D>
         <p:ModelVisual3D.Content>
           <p:GeometryModel3D>
@@ -13,6 +14,7 @@
           </p:GeometryModel3D>
         </p:ModelVisual3D.Content>
       </p:ModelVisual3D>
+      -->
     </p:Viewport3D>
   </p:Border>
 </p:Page>
