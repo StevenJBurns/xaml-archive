@@ -14,7 +14,6 @@
           <DirectionalLight Color="#C0C0C0" />
         </p:Model3DCollection>
       </p:Viewport3D.Models>
-      <!--
       <p:ModelVisual3D>
         <p:ModelVisual3D.Content>
           <p:GeometryModel3D>
@@ -24,7 +23,6 @@
           </p:GeometryModel3D>
         </p:ModelVisual3D.Content>
       </p:ModelVisual3D>
-      -->
     </p:Viewport3D>
   </p:Border>
 </p:Page>
