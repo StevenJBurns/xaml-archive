@@ -1,30 +1,28 @@
-<p:Page xmlns:p="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        WindowTitle="XAML 3D">
+<Page xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      WindowTitle="XAML 3D">
 
-  <p:Border Margin="48" BorderBrush="Black" BorderThickness="4" Background="DarkGray">
-    <p:Viewport3D>
-      <p:Viewport3D.Camera>
-        <PerspectiveCamera />
-      <p:Viewport3D.Camera>
-      <p:Viewport3D.Models>
-        <p:Model3DCollection>
-          <!-- Lighting and Models -->
-          <AmbientLight Color="#000000" />
-          <DirectionalLight Color="#C0C0C0" />
-        </p:Model3DCollection>
-      </p:Viewport3D.Models>
-      <!--
-      <p:ModelVisual3D>
-        <p:ModelVisual3D.Content>
-          <p:GeometryModel3D>
-            <p:GeometryModel3D.Content>
-              <p:MeshGeometry3D Positions="0 0 1, 1 1 0, 1 0 0" TriangleIndicies="0 1 2" />
-            </p:GeometryModel3D.Content>
-          </p:GeometryModel3D>
-        </p:ModelVisual3D.Content>
-      </p:ModelVisual3D>
-      -->
-    </p:Viewport3D>
-  </p:Border>
-</p:Page>
+  <Border Margin="48" BorderBrush="Black" BorderThickness="4" Background="DarkGray">
+    <Viewport3D Height="240" Width="360">
+      <Viewport3D.Camera>
+        <PerspectiveCamera Position="0,0,2" LookDirection="0,0,-1" FieldOfView="60" />
+      </Viewport3D.Camera>
+      <Viewport3D.Children>
+        <ModelVisual3D>
+          <ModelVisual3D.Content>
+            <AmbientLight Color="#FFFFFF" />
+          </ModelVisual3D.Content>
+        </ModelVisual3D>
+        <ModelVisual3D>
+          <ModelVisual3D.Content>
+            <GeometryModel3D>
+              <GeometryModel3D.Geometry>
+                <MeshGeometry3D Positions="0 0 1, 1 1 0, 1 0 0" TriangleIndicies="0 1 2" />
+              </GeometryModel3D.Geometry>
+            </GeometryModel3D>
+          </ModelVisual3D.Content>
+        </ModelVisual3D>
+      </Viewport3D.Children>
+    </Viewport3D>
+  </Border>
+</Page>
