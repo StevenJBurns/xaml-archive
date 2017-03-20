@@ -9,15 +9,15 @@
                mc:ignorable="d" d:designheight="300" d:designwidth="400">
     <usercontrol.resources>
       <style targettype="ProgressBar" x:key="pbStyle">
-        <Setter Property="Minimum" Value="0" ></Setter>
-        <Setter Property="Maximum" Value="100" ></Setter>
-        <Setter Property="Height" Value="30" ></Setter>
-        <Setter Property="Width" Value="125" ></Setter>
-        <Setter Property="Minimum" Value="0" ></Setter>
+        <Setter Property="Minimum" Value="0"></Setter>
+        <Setter Property="Maximum" Value="100"></Setter>
+        <Setter Property="Height" Value="30"></Setter>
+        <Setter Property="Width" Value="125"></Setter>
+        <Setter Property="Minimum" Value="0"></Setter>
       </style>
       <style targettype="ComboBox" x:key="cbStyle">
-        <Setter Property="Height" Value="30" ></Setter>
-        <Setter Property="Width" Value="130" ></Setter>
+        <Setter Property="Height" Value="30"></Setter>
+        <Setter Property="Width" Value="130"></Setter>
       </style>
       <datatemplate x:key="tvDataTemplate">
         <combobox mouseenter="ComboBox_MouseEnter" style="{StaticResource cbStyle}">
